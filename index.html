@@ -23,15 +23,24 @@
     <!-- INICIO -->
     <section id="screen-start" class="panel" aria-labelledby="start-title">
       <h2 id="start-title" class="panel-title">Llená el byte</h2>
-      <p>8 preguntas de <b>Complementos de Matemática II</b>: relaciones, posets, retículos, álgebras de Boole, grupos y categorías.</p>
+      <p>8 preguntas de <b>Complementos de Matemática II</b> sobre los capítulos que elijas.</p>
       <p>Si acertás, el bit pasa a <b class="g">1</b>; si fallás, queda en <b class="r">0</b>. La pregunta 1 vale <b>128</b> y la 8 vale <b>1</b>: tu puntaje es el valor del byte (0-255).</p>
+      <fieldset class="topics-box">
+        <legend>Temas a estudiar</legend>
+        <div class="topics-tools">
+          <button id="topics-all" class="btn-mini" type="button">Todos</button>
+          <button id="topics-none" class="btn-mini" type="button">Ninguno</button>
+        </div>
+        <div id="topics" class="topics"></div>
+        <p id="topics-summary" class="topics-summary" role="status" aria-live="polite"></p>
+      </fieldset>
       <dl class="stats">
         <div><dt>Mejor</dt><dd id="start-best">0</dd></div>
         <div><dt>Mejor racha</dt><dd id="start-streak">0</dd></div>
         <div><dt>Partidas</dt><dd id="start-runs">0</dd></div>
       </dl>
       <button id="start" class="btn btn-gold" type="button">Empezar</button>
-      <p class="hint">Teclas: <kbd>1</kbd>-<kbd>4</kbd> responder, <kbd>Enter</kbd> siguiente</p>
+      <p class="hint">Teclas: <kbd>1</kbd>-<kbd>6</kbd> elegir, <kbd>Enter</kbd> confirmar / siguiente</p>
     </section>
 
     <!-- JUEGO -->
@@ -42,7 +51,9 @@
       </div>
       <p id="q-topic" class="q-topic"></p>
       <h2 id="question" class="question" tabindex="-1"></h2>
+      <p id="q-multi" class="q-multi" hidden>Marcá <b>todas</b> las correctas y confirmá.</p>
       <div id="options" class="options"></div>
+      <button id="confirm" class="btn btn-gold confirm" type="button" hidden disabled>Confirmar</button>
       <div id="feedback" class="feedback" hidden aria-live="polite">
         <p id="feedback-lead" class="feedback-lead"></p>
         <p id="feedback-text" class="feedback-text"></p>
@@ -57,6 +68,7 @@
       <div id="res-bits" class="res-bits" role="img"></div>
       <p class="res-score"><strong id="res-score">0</strong><span>/255</span> <em id="res-hex">0x00</em></p>
       <p class="res-rank"><span id="res-rank">Disquete</span> <span id="res-new" class="badge" hidden>¡Récord!</span></p>
+      <p id="res-topics" class="res-topics"></p>
       <dl class="stats">
         <div><dt>Correctas</dt><dd id="res-correct">0/8</dd></div>
         <div><dt>Racha más larga</dt><dd id="res-streak">0</dd></div>
@@ -66,6 +78,7 @@
       <div class="actions">
         <button id="again" class="btn btn-gold" type="button">Jugar otra vez</button>
         <button id="copy" class="btn" type="button">Copiar resultado</button>
+        <button id="change-topics" class="btn btn-wide" type="button">Cambiar temas</button>
       </div>
       <p id="copy-status" class="copy-status" role="status" aria-live="polite"></p>
     </section>
