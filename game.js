@@ -1,9 +1,10 @@
-/* Byte Run - game logic + UI. No dependencies. */
+/* Trivia Overflow - game logic + UI. No dependencies. */
 (function () {
   "use strict";
 
   var BITS = 8;
-  var STORAGE_KEY = "byterun:v1";
+  var STORAGE_KEY = "triviaoverflow:v1";
+  var LEGACY_STORAGE_KEY = "byterun:v1"; // stats saved before the rename
   var RANKS = [
     { min: 255, title: "Byte perfecto" },
     { min: 192, title: "Fibra óptica" },
@@ -109,7 +110,8 @@
   function loadStats() {
     var base = { best: 0, bestStreak: 0, runs: 0, chapters: null };
     try {
-      var raw = window.localStorage.getItem(STORAGE_KEY);
+      var raw = window.localStorage.getItem(STORAGE_KEY) ||
+        window.localStorage.getItem(LEGACY_STORAGE_KEY);
       if (!raw) return base;
       var s = JSON.parse(raw);
       return {
@@ -412,7 +414,7 @@
       : (run.chapters.length === 1 ? "Cap. " : "Caps. ") + run.chapters.join(", ");
     el.resTopics.textContent = "Temas: " + topicsText;
 
-    lastResultText = "BYTE RUN " + byteStr + " = " + value + "/255 (" + hex + ")\n" +
+    lastResultText = "TRIVIA OVERFLOW " + byteStr + " = " + value + "/255 (" + hex + ")\n" +
       run.bits.map(function (b) { return b ? "🟩" : "🟥"; }).join("") + "\n" +
       rank + " | " + correct + "/" + BITS + " correctas | racha " + run.longest + "\n" +
       "Complementos de Matemática II · " + topicsText;

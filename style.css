@@ -54,12 +54,13 @@ body::after {
 .logo {
   margin: 0;
   font-family: var(--font-pixel);
-  font-size: 30px;
+  font-size: 24px;
+  line-height: 1;
   letter-spacing: 2px;
   color: var(--gold);
   text-shadow: 3px 3px 0 var(--line);
 }
-.logo span { color: var(--ink); margin-left: 6px; }
+.logo span { display: block; color: var(--ink); }
 .hud {
   font-family: var(--font-pixel);
   font-size: 15px;
@@ -345,6 +346,9 @@ kbd {
 .copy-status { text-align: center; color: var(--green); min-height: 1.5em; margin: 10px 0 0 !important; }
 
 .foot { font-size: 11px; color: var(--muted); text-align: center; }
+.foot p { margin: 0 0 8px; }
+.foot .legal { font-size: 10px; line-height: 1.5; opacity: .85; }
+.foot cite { font-style: italic; }
 
 @media (max-width: 360px) {
   .actions { grid-template-columns: 1fr; }

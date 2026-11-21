@@ -1,5 +1,6 @@
 /*
- * Byte Run - banco de preguntas.
+ * Trivia Overflow - banco de preguntas.
+ * Basado en "Complementos de Matemática II" (FCEIA, Universidad Nacional de Rosario).
  * Fuente: "Complementos de Matemática II" (LCC, FCEIA - UNR, 2026), docs/ComplementosII.pdf
  *
  * Para agregar una pregunta, sumá un objeto al arreglo:

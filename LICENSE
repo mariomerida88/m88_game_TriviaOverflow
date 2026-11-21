@@ -1,0 +1,43 @@
+Trivia Overflow — licencias
+
+Este repositorio tiene dos partes con condiciones distintas.
+
+1. CÓDIGO (index.html, style.css, game.js y la estructura de questions.js)
+-------------------------------------------------------------------------
+
+MIT License
+
+Copyright (c) 2026 Mario Mérida
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+2. CONTENIDO ACADÉMICO (las preguntas, opciones y explicaciones de questions.js)
+-------------------------------------------------------------------------------
+
+Copyright (c) 2026 Universidad Nacional de Rosario
+
+Las preguntas están basadas en el apunte "Complementos de Matemática II" de la
+Licenciatura en Ciencias de la Computación, Facultad de Ciencias Exactas,
+Ingeniería y Agrimensura (FCEIA), Universidad Nacional de Rosario. Los derechos
+sobre ese contenido académico pertenecen a la Universidad Nacional de Rosario.
+
+Este contenido se usa con fines exclusivamente didácticos y académicos, sin
+fines comerciales. Puede usarse y compartirse con fines educativos manteniendo
+este aviso y la referencia al material original. Queda prohibido su uso
+comercial.
